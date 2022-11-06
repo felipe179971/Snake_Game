@@ -14,7 +14,7 @@ tela=pygame.display.set_mode((largura,altura))#(largura,altura)
 #Titulo da tela
 pygame.display.set_caption("Snake Game")
 #Icone do jogo
-img=pygame.image.load('Extra/Snake_ico.png')
+img=pygame.image.load('Extra/Snake_ico_removebg.png')
 pygame.display.set_icon(img)
 #Loop principal do jogo##########################################
 while True:
