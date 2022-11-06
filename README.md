@@ -1,17 +1,9 @@
 ---
-output: github_document
+title: "Example"
+output: html_document
 ---
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "F:/Python Projects/Snake_Game/Extra/Snake_ico.png",
-  out.width = "100%"
-)
-options(tibble.print_min = 5, tibble.print_max = 5)
-```
-
-# Snake Game <img src='F:/Python Projects/Snake_Game/Extra/Snake_ico.png' align="right" /></a>
+Markdown `r shiny::icon("snake")` is a simple formatting syntax for authoring HTML, PDF, and MS Word documents.
+<p align="right">
+![Caption for the picture.](F:/Python Projects/Snake_Game/Extra/Snake_ico.png){#id .class width=10% height=10% title="dfa"} #fasdf 
+</p>
