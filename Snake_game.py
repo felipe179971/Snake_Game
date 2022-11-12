@@ -11,6 +11,8 @@ x=largura/2;y=altura/2 #controle do movimento do retangulo
 x_food=randint(40,600);y_food=randint(50,430) #posicao aleatoria da comida
 relogio=pygame.time.Clock() #velocidade do jogo via 'frames'
 tela=pygame.display.set_mode((largura,altura))#(largura,altura)
+fonte=pygame.font.SysFont('arial',35,True,False)#Texto com o placar
+pontos=0
 #Titulo da tela
 pygame.display.set_caption("Snake Game")
 #Icone do jogo
@@ -22,6 +24,8 @@ while True:
     for event in pygame.event.get():
         relogio.tick(100)#velocidade do jogo via 'frames'
         tela.fill((0, 0, 0))  # "limpando" a tela para o retangulo andar
+        mensagem=f"Point: {pontos}" #placar
+        texto_formatado=fonte.render(mensagem,True,(255,255,255))#true=nao pixelado
         #Fechar janela
         if event.type==QUIT:
             pygame.quit()
@@ -56,5 +60,8 @@ while True:
         #Eat the food
         if snake.colliderect(food):
             x_food=randint(40,600);y_food=randint(50,430) #posicao aleatoria da comida
+            pontos=pontos+1 #se comer, ganha pontos
+    #imprimindo o placar
+    tela.blit(texto_formatado,(400,15))
     #Atualizar a tela a cada loop principal
     pygame.display.update()
